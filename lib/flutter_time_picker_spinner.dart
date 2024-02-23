@@ -79,10 +79,11 @@ class TimePickerSpinner extends StatefulWidget {
   final double? spacing;
   final bool isForce2Digits;
   final TimePickerCallback? onTimeChange;
-
+  final Widget? separator;
   TimePickerSpinner(
       {Key? key,
       this.time,
+      this.separator,
       this.minutesInterval = 1,
       this.secondsInterval = 1,
       this.is24HourMode = true,
@@ -244,6 +245,10 @@ class _TimePickerSpinnerState extends State<TimePickerSpinner> {
         ),
       ),
       spacer(),
+      if(widget.separator!=null)
+        widget.separator!,
+      if(widget.separator!=null)
+        spacer(),
       SizedBox(
         width: _getItemWidth(),
         height: _getItemHeight()! * 3,

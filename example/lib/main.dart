@@ -111,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return new TimePickerSpinner(
       spacing: 40,
       minutesInterval: 15,
+      separator: Text(":"),
       onTimeChange: (time) {
         setState(() {
           _dateTime = time;
